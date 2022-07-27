@@ -1,11 +1,16 @@
-library(readxl)
-library(lubridate)
+# BUMP Data Sheet Creator
+# version 2.0.1
+# Created by Justin Wright, 2022
+# Oklahoma Water Resources Board
+
 library(tidyverse)
 library(dplyr)
 library(shiny)
 library(DT)
+
 #-----
-data <- readRDS("C:/Users/308331/OneDrive - State of Oklahoma/Data Management/R/R Shiny Development/Training Resources/BUMP Sheets/BUMPPOR.rds")
+# Pull data from GitHub
+data <- readRDS(gzcon(url("https://github.com/jtw-owrb/BUMP-Sheets/raw/main/BUMPPOR.rds")))
 #-----
 #Begin Shiny app
 
